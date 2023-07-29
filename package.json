@@ -1,0 +1,39 @@
+{
+  "name": "bhimdhwaja",
+  "version": "1.0.0",
+  "description": "Bhimdwaja | Bhimashankar- Gems and Rudraksha",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --openssl-legacy-provider backend/server ",
+    "server": "nodemon --openssl-legacy-provider backend/server ",
+    "client": "npm --openssl-legacy-provider start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Bhimdhwaja",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^9.0.0",
+    "mdb-react-ui-kit": "^6.0.0",
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "otp-generator": "^4.0.1",
+    "pm2": "^5.3.0",
+    "react-otp-input": "^3.0.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.22"
+  }
+}
